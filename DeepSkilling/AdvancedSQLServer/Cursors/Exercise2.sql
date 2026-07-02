@@ -1,0 +1,16 @@
+
+DECLARE static_emp_cursor CURSOR STATIC FOR
+SELECT EmployeeID, FirstName, LastName FROM Employees;
+
+
+DECLARE dynamic_emp_cursor CURSOR DYNAMIC FOR
+SELECT EmployeeID, FirstName, LastName FROM Employees;
+
+
+DECLARE forward_emp_cursor CURSOR FORWARD_ONLY FOR
+SELECT EmployeeID, FirstName, LastName FROM Employees;
+
+
+DECLARE keyset_emp_cursor CURSOR KEYSET FOR
+SELECT EmployeeID, FirstName, LastName FROM Employees;
+GO

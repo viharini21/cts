@@ -1,8 +1,3 @@
--- Drop in reverse dependency order (Employees references Departments)
-IF OBJECT_ID('dbo.Employees', 'U') IS NOT NULL DROP TABLE Employees;
-IF OBJECT_ID('dbo.Departments', 'U') IS NOT NULL DROP TABLE Departments;
-IF OBJECT_ID('dbo.AuditLog', 'U') IS NOT NULL DROP TABLE AuditLog;
-
 CREATE TABLE Departments (
     DepartmentID INT PRIMARY KEY,
     DepartmentName VARCHAR(100) NOT NULL
@@ -15,7 +10,7 @@ CREATE TABLE Employees (
     Email VARCHAR(100) UNIQUE,
     Salary DECIMAL(10, 2),
     DepartmentID INT,
-    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+    FOREIGN KEY (DepartmentID) REFERENCES Departments (DepartmentID)
 );
 
 CREATE TABLE AuditLog (

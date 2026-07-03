@@ -13,8 +13,10 @@ BEGIN
         VALUES (@EmployeeID, @FirstName, @LastName, @Email, @Salary, @DepartmentID);
     END TRY
     BEGIN CATCH
-        -- Log the error into the AuditLog table
         INSERT INTO AuditLog (Action, ErrorMessage)
         VALUES ('Insert Employee', ERROR_MESSAGE());
+
+        -- Re-raise the error back to the caller
+        THROW;
     END CATCH
 END;

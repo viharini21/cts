@@ -8,13 +8,21 @@ CREATE OR ALTER PROCEDURE AddEmployee (
 )
 AS
 BEGIN
+    -- Validate salary first
+    IF @Salary <= 0
+    BEGIN
+        RAISERROR ('Salary must be greater than zero.', 16, 1);
+        RETURN; -- Stop execution
+    END
+
     BEGIN TRY
         INSERT INTO Employees (EmployeeID, FirstName, LastName, Email, Salary, DepartmentID)
         VALUES (@EmployeeID, @FirstName, @LastName, @Email, @Salary, @DepartmentID);
     END TRY
     BEGIN CATCH
-        -- Log the error into the AuditLog table
         INSERT INTO AuditLog (Action, ErrorMessage)
         VALUES ('Insert Employee', ERROR_MESSAGE());
+        
+        THROW;
     END CATCH
 END;

@@ -1,0 +1,9 @@
+angular.json: Workspace build/test/serve configuration including project targets and budgets.
+tsconfig.json: Base TypeScript compiler options shared across app and tests.
+tsconfig.app.json: TypeScript compiler settings specific to production app source.
+package.json: Project metadata, scripts, and dependency version definitions.
+src/main.ts: Entry point that bootstraps the root standalone Angular application.
+src/app/app.config.ts: Global providers setup (router, HTTP, store, interceptors, etc.).
+src/app/app.ts: Root component that hosts layout shell and router outlet.
+src/index.html: Single host HTML document where Angular renders into app-root.
+Budgets (angular.json): maximumWarning and maximumError define bundle-size thresholds that warn or fail production builds.

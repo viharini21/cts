@@ -1,0 +1,28 @@
+# Build results
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files
+*.rsuser
+
+# Local environment files
+.env
+*.local
+
+# macOS
+.DS_Store
+
+# Temp files
+*.tmp
+*.bak

@@ -1,0 +1,40 @@
+.panel {
+  background: #fff;
+  border: 1px solid #d0d7e2;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.55rem;
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+input,
+select {
+  padding: 0.45rem;
+}
+
+.ng-invalid.ng-touched {
+  border-color: #c92a2a;
+}
+
+.ng-valid.ng-touched {
+  border-color: #2f9e44;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.success {
+  margin-top: 0.6rem;
+  color: #2f9e44;
+  font-weight: 600;
+}

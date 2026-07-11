@@ -1,0 +1,7 @@
+<section class="panel">
+  <h2>Student Profile</h2>
+  <p>Enrolled courses:</p>
+  <ul>
+    <li *ngFor="let course of enrolledCourses">{{ course.name }} ({{ course.code }})</li>
+  </ul>
+</section>

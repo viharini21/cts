@@ -1,0 +1,25 @@
+.panel {
+  background: #fff;
+  border: 1px solid #d0d7e2;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1rem 0;
+}
+
+.stats-row div {
+  background: #f2f7ff;
+  border: 1px solid #cad9ef;
+  border-radius: 8px;
+  padding: 0.65rem;
+}
+
+input {
+  margin-top: 0.7rem;
+  padding: 0.45rem 0.5rem;
+}

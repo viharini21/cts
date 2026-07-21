@@ -17,6 +17,4 @@ export class Highlight {
   onMouseLeave(): void {
     this.el.nativeElement.style.backgroundColor = '';
   }
-
-  constructor() {}
 }

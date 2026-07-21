@@ -1,5 +1,7 @@
+import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 
 import { CourseService } from './course';
 
@@ -20,8 +22,7 @@ describe('CourseService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [CourseService],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([]), CourseService],
     });
 
     service = TestBed.inject(CourseService);
@@ -54,7 +55,13 @@ describe('CourseService', () => {
       },
     });
 
-    const req = httpMock.expectOne('http://localhost:3000/courses');
-    req.flush('Server error', { status: 500, statusText: 'Server Error' });
+    const req1 = httpMock.expectOne('http://localhost:3000/courses');
+    req1.flush('Server error', { status: 500, statusText: 'Server Error' });
+
+    const req2 = httpMock.expectOne('http://localhost:3000/courses');
+    req2.flush('Server error', { status: 500, statusText: 'Server Error' });
+
+    const req3 = httpMock.expectOne('http://localhost:3000/courses');
+    req3.flush('Server error', { status: 500, statusText: 'Server Error' });
   });
 });

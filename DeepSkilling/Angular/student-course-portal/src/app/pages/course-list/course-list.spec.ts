@@ -1,3 +1,5 @@
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 
@@ -22,7 +24,7 @@ describe('CourseList', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CourseList],
-      providers: [
+      providers: [provideHttpClient(), provideRouter([]), 
         provideMockStore({
           initialState: {
             course: { courses: mockCourses, loading: false, error: null },

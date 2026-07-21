@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   AbstractControl,
   FormArray,
@@ -16,6 +16,8 @@ import {
   styleUrl: './reactive-enrollment-form.css',
 })
 export class ReactiveEnrollmentForm implements OnInit {
+  private readonly fb = inject(FormBuilder);
+
   enrollForm = this.fb.group({
     studentName: ['', [Validators.required, Validators.minLength(3)]],
     studentEmail: ['', [Validators.required, Validators.email], [this.simulateEmailCheck]],
@@ -25,7 +27,7 @@ export class ReactiveEnrollmentForm implements OnInit {
     additionalCourses: this.fb.array([]),
   });
 
-  constructor(private readonly fb: FormBuilder) {}
+  constructor() {}
 
   ngOnInit(): void {}
 

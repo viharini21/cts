@@ -1,3 +1,5 @@
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StudentProfile } from './student-profile';
@@ -7,7 +9,7 @@ describe('StudentProfile', () => {
   let fixture: ComponentFixture<StudentProfile>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    await TestBed.configureTestingModule({ providers: [provideHttpClient(), provideRouter([])], 
       imports: [StudentProfile]
     })
     .compileComponents();

@@ -1,3 +1,5 @@
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotFound } from './not-found';
@@ -7,7 +9,7 @@ describe('NotFound', () => {
   let fixture: ComponentFixture<NotFound>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    await TestBed.configureTestingModule({ providers: [provideHttpClient(), provideRouter([])], 
       imports: [NotFound]
     })
     .compileComponents();

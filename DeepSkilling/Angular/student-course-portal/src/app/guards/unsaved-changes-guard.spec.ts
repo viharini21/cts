@@ -1,14 +1,16 @@
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
+import { CanDeactivateFn } from '@angular/router';
 
 import { unsavedChangesGuard } from './unsaved-changes-guard';
 
 describe('unsavedChangesGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
+  const executeGuard: CanDeactivateFn<any> = (...guardParameters) => 
       TestBed.runInInjectionContext(() => unsavedChangesGuard(...guardParameters));
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({ providers: [provideHttpClient(), provideRouter([])], });
   });
 
   it('should be created', () => {

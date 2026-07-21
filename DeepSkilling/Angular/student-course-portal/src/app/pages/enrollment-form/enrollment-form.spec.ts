@@ -1,3 +1,5 @@
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EnrollmentForm } from './enrollment-form';
@@ -7,7 +9,7 @@ describe('EnrollmentForm', () => {
   let fixture: ComponentFixture<EnrollmentForm>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    await TestBed.configureTestingModule({ providers: [provideHttpClient(), provideRouter([])], 
       imports: [EnrollmentForm]
     })
     .compileComponents();

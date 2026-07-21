@@ -24,7 +24,7 @@ export class EnrollmentForm {
 
   onSubmit(form: NgForm): void {
     console.log('Template form value:', form.value, 'valid:', form.valid);
-    this.submitted = form.valid;
+    this.submitted = form.valid ?? false;
 
     if (form.valid && this.model.courseId !== null) {
       this.courseService

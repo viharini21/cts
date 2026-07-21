@@ -1,40 +1,48 @@
-.panel {
-  background: #fff;
-  border: 1px solid #d0d7e2;
-  border-radius: 12px;
-  padding: 1rem;
-}
-
 form {
-  display: grid;
-  gap: 0.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 label {
-  display: grid;
-  gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
 }
 
-input,
-select {
-  padding: 0.45rem;
+label:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
 }
 
-.ng-invalid.ng-touched {
-  border-color: #c92a2a;
+label:has(input[type="checkbox"]) input {
+  width: auto;
 }
 
-.ng-valid.ng-touched {
-  border-color: #2f9e44;
+span {
+  display: block;
+  color: var(--color-danger);
+  font-size: 0.875rem;
+  margin-top: -var(--spacing-sm);
 }
 
 .actions {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
 }
 
 .success {
-  margin-top: 0.6rem;
-  color: #2f9e44;
-  font-weight: 600;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: #d1fae5;
+  color: #065f46;
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn var(--transition-normal);
 }

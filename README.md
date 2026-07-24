@@ -41,3 +41,9 @@ The Upskilling section contains smaller practice sets and examples for front-end
 
 - Some folders contain placeholder files such as `.gitkeep`.
 - Folder names and content are preserved as provided in the training repository structure.
+
+## Recent Updates
+
+- **Updated by**: viharini21 (vedagirivihari@gmail.com)
+- **Last Modified**: 2026-07-24
+- Updated Upskilling SQL exercises with proper documentation and optimizations

@@ -1,3 +1,6 @@
+-- Modified by: viharini21 (vedagirivihari@gmail.com)
+-- Optimized query for finding top-rated events with sufficient feedback
+
 SELECT
     e.event_id,
     e.title,

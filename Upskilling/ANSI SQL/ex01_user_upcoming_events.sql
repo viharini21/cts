@@ -1,3 +1,7 @@
+-- Modified by: viharini21
+-- Date: 2026-07-24
+-- Query to find users with upcoming events in their city
+
 SELECT
     u.user_id,
     u.full_name,

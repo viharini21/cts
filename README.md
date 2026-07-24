@@ -1,50 +1,43 @@
-# COGNIZANT Learning Repository
+# CTS Cognizant Learning Repository
 
-This repository contains hands-on training material organized into two main tracks: DeepSkilling and Upskilling. The content is a mix of SQL scripts, .NET examples, Angular apps, web exercises, and testing practice.
+This repository contains the CTS DeepSkilling and Upskilling learning materials organized into practical exercises, hands-on labs, and reference content.
 
-## Repository Structure
+## Overview
 
-### DeepSkilling
+The repo is split into two main tracks:
 
-DeepSkilling contains the core learning modules and guided exercises.
+- DeepSkilling: advanced, module-based training content for SQL Server, Angular, Entity Framework Core, microservices, Git, Web API, and NUnit/Moq practice.
+- Upskilling: topic-focused exercises for SQL, HTML, CSS, JavaScript, jQuery, Bootstrap 5, and C# ADO.NET.
 
-- `AdvancedSQLServer` - advanced SQL Server topics such as window functions, CTEs, views, indexes, stored procedures, triggers, cursors, and query optimization.
-- `Angular` - the `student-course-portal` application, including components, services, guards, interceptors, store logic, and tests.
-- `Engineering concepts` - design principles and data structures exercises.
-- `Entity Framework Core` - module-based EF Core labs covering relationships, loading strategies, seeding, query caching, bulk operations, concurrency, and schema changes.
-- `GIT` - Git practice material.
-- `Microservices` - microservices-related learning content.
-- `NUnit and Moq` - unit testing and mocking exercises across multiple practice projects.
-- `WebApi` - web API learning material.
+## DeepSkilling
 
-### Upskilling
+The DeepSkilling area includes the main training content under the `Deepskilling contents` folder. It covers:
 
-Upskilling contains topic-focused practice exercises and examples.
+- Advanced SQL Server concepts such as functions, cursors, triggers, views, stored procedures, indexes, exception handling, and advanced querying.
+- Angular training material, including the student-course-portal project.
+- Entity Framework Core exercises and module-based labs.
+- Engineering concepts, including data structures and design principles.
+- Git practice material.
+- Microservices and Web API learning content.
+- NUnit and Moq exercises for unit testing and mocking.
 
-- `ANSI SQL` - query practice scripts and analytics-style exercises.
-- `Bootstrap5` - UI and layout examples using Bootstrap 5.
-- `C#ADO.NET` - ADO.NET practice material.
-- `CSS3` - CSS exercises.
-- `HTML5` - HTML practice.
-- `JavaScript` - JavaScript exercises.
-- `jQuery` - jQuery examples.
+## Upskilling
 
-## What You Will Find
+The Upskilling section contains smaller practice sets and examples for front-end and database fundamentals:
 
-- SQL practice from beginner to advanced levels
-- .NET and Entity Framework Core labs
-- Angular application code with tests and supporting assets
-- Front-end exercises across HTML, CSS, Bootstrap, JavaScript, and jQuery
-- NUnit and Moq examples for unit testing practice
+- ANSI SQL scripts and query exercises.
+- Bootstrap 5 layouts and UI exercises.
+- C# ADO.NET practice files.
+- HTML5, CSS3, JavaScript, and jQuery exercises.
 
-## How To Use This Repository
+## How To Use
 
 1. Open the track you want to study.
-2. Follow the module or exercise README files inside that folder.
-3. Run the project or script files from the matching exercise folder.
-4. Use the provided source files, screenshots, and notes as reference material while practicing.
+2. Review the module README files or exercise files inside that folder.
+3. Run or practice the scripts and projects from the matching exercise folder.
+4. Use the source files, screenshots, and notes as reference while working through the material.
 
 ## Notes
 
-- Some folders contain only placeholders such as `.gitkeep` where no files were committed yet.
-- Several subfolders include generated project files, build outputs, and local exercise assets.
+- Some folders contain placeholder files such as `.gitkeep`.
+- Folder names and content are preserved as provided in the training repository structure.
